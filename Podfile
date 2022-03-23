@@ -7,6 +7,7 @@ target 'hov_assesment' do
 
   # Pods for hov_assesment
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'SDWebImage'
 
   target 'hov_assesmentTests' do
     inherit! :search_paths
