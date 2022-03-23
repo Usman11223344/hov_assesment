@@ -1,0 +1,6 @@
+framework module Pods_hov_assesment {
+  umbrella header "Pods-hov_assesment-umbrella.h"
+
+  export *
+  module * { export * }
+}
