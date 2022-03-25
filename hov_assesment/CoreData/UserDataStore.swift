@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class UserDataStore {
     
@@ -23,4 +24,15 @@ class UserDataStore {
         return users
     }
     
+    func deleteAllUser() {
+        
+        let managedObjectContext = CoreDataStack.manager.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        let deleteRequest = NSBatchDeleteRequest( fetchRequest: fetchRequest)
+        
+        do{
+            try managedObjectContext.execute(deleteRequest)
+        }catch {
+        }
+    }
 }
