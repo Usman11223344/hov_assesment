@@ -69,6 +69,7 @@ class UsersViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func reloadUsersList() {
+        UserDataStore.store.deleteAllUser()
         getUsersList()
     }
     
